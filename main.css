@@ -128,7 +128,7 @@ ul,li,a {
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     background-color: transparent;
-    animation: moveUpDown 2s ease-in-out infinite;
+    animation: moveUpDown 3s infinite;
 }
 @keyframes moveUpDown {
     0% {
@@ -136,15 +136,15 @@ ul,li,a {
         opacity: 1; /
     }
     25% {
-        transform: translate3d(-50%, -60%, 0); 
+        transform: translate3d(-50%, -70%, 0); 
         opacity: 1; 
     }
     50% {
-        transform: translate3d(-50%, -70%, 0);
+        transform: translate3d(-50%, -90%, 0);
         opacity: 0; 
     }
     75% {
-        transform: translate3d(-50%, -80%, 0);
+        transform: translate3d(-50%, -70%, 0);
         opacity: 0; 
     }
     100% {
@@ -193,7 +193,7 @@ ul,li,a {
 }
 
 #main_3 .cons_stat {
-    
+
 }
 
 
