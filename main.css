@@ -2055,5 +2055,225 @@ display: block;
     #main_8 .tax2_text p {
         font-size: 18px;
     }
+
+    #main_8 .insurance {
+        margin-bottom: 100px;
+        flex-direction: column;
+    }
+
+    #main_8 .insurance_left {
+        flex: 1;
+        margin-right: 0;
+    }
+
+    #main_8 .insurance_left img {
+        max-width: 240px;
+        margin-bottom: 30px;
+    }
+
+   #main_8 .insurance_text h2 {
+    font-size: 26px;
+   }
+
+   #main_8 .insurance_text h3 {
+    font-size: 26px;
+   }
+
+   #main_8 .insurance_right {
+    align-self: flex-end;
+        max-width: 240px;
+        margin-top: 100px;
+   }
+
+   #main_8 .insurance_text p{
+    font-size: 18px;
+    font-weight: 600;
+   }
+
+   #main_8 .estate img {
+    margin-bottom: 30px;
+   }
+
+   #main_8 .flex_box {
+    flex-direction: column;
+   }
+
+   #main_8 .estate_text {
+    margin-bottom: 30px;
+   }
+
+   #main_8 .estate_text h2 {
+    margin-bottom: 0px;
+    font-size: 26px;
+   }
+
+   #main_8 .estate_text h3 {
+    font-size: 26px;
+    
+   }
+
+   #main_8 .flex_box p {
+    font-size: 18px;
+   }
+
+   
+   /* main_10 */
+
+   #main_10 {
+    padding: 0 0 100px 0;
+   }
+
+   #main_10 .business_top {
+    width: 100%;
+   }
+
+   #main_10 .business_top img {
+         /* width: auto;
+        height: 600px; */
+        margin-bottom: 4px;
+   }
+
+   #main_10 .business_bottom h1{
+    font-size: 36px;
+   }
+
+   #main_10 .business_bottom h2{
+    font-size: 18px;
+    margin-bottom: 100px;
+   }
+
+   #main_10 .business_menus {
+    display: block;
+   }
+
+   #main_10 .business_menu {
+    align-items: flex-start;
+        gap: 40px;
+        padding: 0px 24px;
+   }
+
+   #main_10 .business_payment {
+    width: 100%;
+    margin-left: 20px;
+   }
+
+
+   #main_10 .business_payment span {
+    font-size: 26px;
+    margin-bottom: 10px;
+   }
+
+   #main_10 .business_payment p {
+    font-size: 18px;
+    margin-bottom: 20px;
+   }
+
+   #main_10 .business_ledger {
+        width: 100%;    
+        margin-top: 40px;
+        margin-bottom: 0;
+   }
+
+   #main_10 .business_ledger span {
+    font-size: 26px;
+    margin-bottom: 10px;
+   }
+
+   #main_10 .business_ledger p {
+    font-size: 18px;
+    margin-bottom: 20px;
+   }
+
+   #main_10 .business_pay {
+    width: 100%;
+    margin-top: 40px;
+        margin-bottom: 0;
+   }
+
+   #main_10 .business_pay span {
+    font-size: 26px;
+    margin-bottom: 10px;
+   }
+
+   #main_10 .business_pay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+   }
+
+   #main_10 .business_Place {
+    width: 100%;
+    margin-top: 40px;
+        margin-bottom: 0;
+   }
+
+   #main_10 .business_Place span {
+    font-size: 26px;
+    margin-bottom: 10px;
+   }
+
+   #main_10 .business_Place p {
+    font-size: 18px;
+    margin-bottom: 20px;
+   }
+
+   /* main_11 */
+
+   #main_11 {
+    padding: 72px 0px;
+   }
+
+   #main_11 .business_text {
+    padding-left: 31px;
+   }
+
+   #main_11 .business_text h1 {
+    font-size: 30px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #6b7684;
+        margin-bottom: 12px;
+   }
+
+   #main_11 .business_text p {
+    font-size: 17px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #6b7684;
+   }
+
+   #main_11 .business_img {
+    display: none;
+   }
+
+   /* footer */
+
+   #footer {
+    margin-top: 0;
+    padding: 60px 40px 80px;
+   }
+
+   #footer .inner {
+    padding: 0;
+   }
+
+   #footer .footer_top {
+    flex-direction: column;
+        padding-bottom: 0;
+   }
+
+   #footer .footer_top ul {
+    width: 100%;
+        padding-bottom: 40px;
+   }
+
+   #footer .footer_top:last-of-type {
+    flex: 1;
+   }
+
+   #footer .terms_and {
+    grid-template-columns: auto;
+    row-gap: 6px;
+    column-gap: unset;
+   }
 }
 
