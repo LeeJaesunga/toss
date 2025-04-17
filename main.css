@@ -721,28 +721,30 @@ ul,li,a {
 #main_7 .inv_pon {
     position: relative;
     margin-bottom: 12px;
+    width: 100%;
 }
 
 #main_7 .inv_pons {
     position: relative;
-    width: 600px;
-    height: 936px;
+    width: 60%;
+    height: 100%;
     margin: 0 auto;
 }
 
 #main_7 .inv_pons img {
-    width: 600px;
-    height: 936px;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 #main_7 .inv_pons .stock{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 57%;
+    width: 48%;
     height: auto;
     transform: translate3d(-50%, -50%, 0);
-    border-radius: 58px
+    border-radius: 58px;
 }
 
 #main_7 .inv_text {
@@ -1145,6 +1147,8 @@ ul,li,a {
     width: 480px;
     color: rgb(78, 89, 104);
 }
+
+
 
 
 /* main_10 */
@@ -1720,20 +1724,18 @@ display: block;
     }
 
     #main_3 .pons {
-        position: static;
+        position: sticky;
         flex-shrink: 0;
         width: 100%;
         max-width: 375px;
         height: auto;
     }
 
-    
-
     #main_3 .ponss {
         width: 100%;
         max-width: 375px;
         height: auto;
-        position: static;
+        position: sticky;
         flex-shrink: 0;
         margin-left: -100px;
     }
@@ -1950,6 +1952,7 @@ display: block;
 
     /* main_7 */
 
+
     #main_7 .inner {
         padding: 100px 0;
     }
@@ -2116,6 +2119,44 @@ display: block;
     font-size: 18px;
    }
 
+   /* main_9 */
+   
+   #main_9 .inner {
+    padding: 100px 0;
+   }
+
+   #main_9 .blank {
+    padding: 0px 22px;
+   }
+
+   /* #main_9 .payment {
+    height: 100%;
+   } */
+
+   #main_9 .payment_text h1 {
+    margin-bottom: 10px;
+    font-size: 18px;
+   }
+
+   #main_9 .payment_text h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+   }
+
+   #main_9 .pornn {
+    display: none;
+   }
+
+   #main_9
+
+   #main_9
+
+   #main_9
+
+   #main_9
+
+   #main_9
+
    
    /* main_10 */
 
@@ -2274,6 +2315,12 @@ display: block;
     grid-template-columns: auto;
     row-gap: 6px;
     column-gap: unset;
+   }
+}
+
+@media (min-width:640px) {
+   #main_9 .pornns2 {
+    display: none;
    }
 }
 
