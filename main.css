@@ -1148,6 +1148,52 @@ ul,li,a {
     color: rgb(78, 89, 104);
 }
 
+/* main_9 hiddeen */
+
+#main_9 .pornns1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#main_9 .pornn_inner {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+#main_9 .pornn_inner2 {
+    position: relative;
+    width: 600px;
+    height: 936px;
+    margin: 0px auto;
+}
+
+#main_9 .barcode {
+    position: absolute;
+    top: 9%;
+    left: 22%;
+    width: 57%;
+    height: auto;
+    border-radius: 22px;
+}
+
+#main_9 .pornn_inner2 .porn_barcodes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#main_9 .pornn_inner span {
+    font-weight: 600;
+    line-height: 1.5;
+    width: 100%;
+    color: rgb(78, 89, 104);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 17px;
+}
 
 
 
@@ -2122,7 +2168,7 @@ display: block;
    /* main_9 */
    
    #main_9 .inner {
-    padding: 100px 0;
+    padding: 100px 0 200px;
    }
 
    #main_9 .blank {
@@ -2147,9 +2193,16 @@ display: block;
     display: none;
    }
 
-   #main_9
+   #main_9 .pornn_inner {
+    display: flex;
+    flex-direction: column;
+   }
 
-   #main_9
+   #main_9 .pornn_inner2 {
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+   }
 
    #main_9
 
