@@ -50,7 +50,8 @@
             </div>
 
             <div class="main_font">
-                <h1>금융의 모든것<br>토스에서<br>쉽고 간편하게</h1>
+                <h1>금융의 모든것 
+토스에서 쉽고 간편하게</h1>
                 <a href="#">앱 다운로드</a>
             </div>
 
@@ -567,24 +568,40 @@
 </div>
 
 
-<!-- <script>
-    // 스크롤 시 동작할 함수
-    window.addEventListener('scroll', function() {
-        var scrollPosition = window.scrollY;  // 현재 스크롤 위치
-        var maxHeight = 500; // 최대 스크롤 범위 (스크롤 내릴 수 있는 최대 값)
-        var minHeight = 0;  // 최소 높이 값 (스크롤이 올라갔을 때 크기)
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const main3Target = document.querySelector("#main_3 .cons_stat");
+  const main4Target = document.querySelector("#main_4 .kimtos"); // 메인4 시작 타이밍을 좀 더 정확히 잡기
 
-        // 스크롤 위치에 따라 transform 값을 조정
-        var transformValue = (scrollPosition / maxHeight) * 100;
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // main_3 애니메이션
+        if (entry.target.classList.contains("cons_stat")) {
+          document.querySelector("#main_3 .cons_stat h1").classList.add("show");
+          document.querySelector("#main_3 .cons_stat h2").classList.add("show");
+          document.querySelector("#main_3 .dadami2_text").classList.add("show");
+        }
 
-        // wtransform과 wtransform2의 크기를 조정
-        var leftTransform = Math.min(transformValue, 100); // 최대 100%까지만 확대
-        var rightTransform = Math.min(transformValue, 100); // 최대 100%까지만 확대
+        // main_4 애니메이션
+        if (entry.target.classList.contains("kimtos")) {
+          document.querySelector("#main_4 .rem").classList.add("show");
+          document.querySelector("#main_4 .kimtos").classList.add("show");
+          document.querySelector("#main_4 .kimtos .kim").classList.add("show");
+          document.querySelector("#main_4 .Kim_Sa_gi").classList.add("show");
+        }
 
-        // 요소들의 transform 속성 변경
-        document.querySelector('.wtransform').style.transform = `translate3d(-${leftTransform}%, 0, 0)`;
-        document.querySelector('.wtransform2').style.transform = `translate3d(${rightTransform}%, 0, 0)`;
+        observer.unobserve(entry.target);
+      }
     });
-</script> -->
+  }, {
+    threshold: 0.6 // 요소가 화면에 60% 이상 들어왔을 때 실행
+  });
+
+  observer.observe(main3Target);
+  observer.observe(main4Target);
+});
+</script>
+
 </body>
 </html>
