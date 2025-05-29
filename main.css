@@ -820,28 +820,28 @@ ul,li,a {
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-/* p가 먼저 나옴 */
+
 .low_less p.show {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 1.2s;
 }
 
-/* step-1: 0.5초 후 */
+
 .low_less .step-1.show {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 2.0s;
 }
 
-/* step-2: 1초 후 */
+
 .low_less .step-2.show {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 2.5s;
 }
 
-/* step-3: 1.5초 후 */
+
 .low_less .step-3.show {
   opacity: 1;
   transform: translateY(0);
