@@ -165,9 +165,9 @@
                 </div>
 
                 <div class="low_less">
-                    <span>한도는 높게,</span>
-                    <span>금리는 <span class="low">낮게,</span></span>
-                    <span>부담은 <span class="less">적게.</span></span>
+                    <span class="step step-1">한도는 높게,</span>
+                    <span class="step step-2">금리는 <span class="low">낮게,</span></span>
+                    <span class="step step-3">부담은 <span class="less">적게.</span></span>
                     <p>앉은 자리에서 여러 은행의 한도와 금리를 비교하고<br>내게 꼭 맞는 대출을 찾아보세요.<br>신용,비상금,대환,주택담보대출 모두 가능해요.</p>
                 </div>
 
@@ -571,8 +571,8 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const main3Target = document.querySelector("#main_3 .cons_stat");
-  const main4Target = document.querySelector("#main_4 .kimtos"); // 메인4 시작 타이밍을 좀 더 정확히 잡기
-  const main5Target = document.querySelector("#main_5 .Loans_star"); // 메인4 시작 타이밍을 좀 더 정확히 잡기
+  const main4Target = document.querySelector("#main_4 .kimtos");
+  const main5Target = document.querySelector("#main_5 .Loans_star");
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -594,16 +594,24 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector("#main_4 .Kim_Sa_gi").classList.add("show");
         }
 
-         // main_5 애니메이션
-         if (entry.target.classList.contains("Loans_star")) {
-            document.querySelector("#main_5 .Loans_star").classList.add("show");
-         }
+        // main_5 애니메이션
+        if (entry.target.classList.contains("Loans_star")) {
+          document.querySelector("#main_5 .Loans_star").classList.add("show");
+
+          // p 태그 먼저 show
+          document.querySelector("#main_5 .low_less p").classList.add("show");
+
+          // step span 들 순서대로 show 클래스 추가
+          document.querySelectorAll("#main_5 .low_less .step").forEach(el => {
+            el.classList.add("show");
+          });
+        }
 
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.6 // 요소가 화면에 60% 이상 들어왔을 때 실행
+    threshold: 0.6 // 요소가 60% 보이면 발동
   });
 
   observer.observe(main3Target);
@@ -611,6 +619,7 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(main5Target);
 });
 </script>
+
 
 </body>
 </html>
