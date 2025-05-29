@@ -572,6 +572,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const main3Target = document.querySelector("#main_3 .cons_stat");
   const main4Target = document.querySelector("#main_4 .kimtos"); // 메인4 시작 타이밍을 좀 더 정확히 잡기
+  const main5Target = document.querySelector("#main_5 .Loans_star"); // 메인4 시작 타이밍을 좀 더 정확히 잡기
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -581,6 +582,8 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector("#main_3 .cons_stat h1").classList.add("show");
           document.querySelector("#main_3 .cons_stat h2").classList.add("show");
           document.querySelector("#main_3 .dadami2_text").classList.add("show");
+          document.querySelector("#main_3 .pons").classList.add("show");
+          document.querySelector("#main_3 .ponss").classList.add("show");
         }
 
         // main_4 애니메이션
@@ -591,6 +594,11 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector("#main_4 .Kim_Sa_gi").classList.add("show");
         }
 
+         // main_5 애니메이션
+         if (entry.target.classList.contains("Loans_star")) {
+            document.querySelector("#main_5 .Loans_star").classList.add("show");
+         }
+
         observer.unobserve(entry.target);
       }
     });
@@ -600,6 +608,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(main3Target);
   observer.observe(main4Target);
+  observer.observe(main5Target);
 });
 </script>
 
