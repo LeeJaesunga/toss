@@ -352,22 +352,22 @@
 
                     <div class="pornn">
                         <div class="pornnall">
-                            <div class="pornn1">
+                            <div class="pornn1 fade-in2">
                                 <img src="./img/iPhone15_Clay_Shadow_03.png" alt="">
                                 <img src="./img/chekout_screen_01.png" alt="" class="barcode">
                             </div>
 
-                            <div class="pornn2">
+                            <div class="pornn2 fade-in">
                                 <img src="./img/iPhone15_Clay_Shadow_03.png" alt="">
                                 <img src="./img/chekout_screen_02.png" alt="" class="musinsa">
                             </div>
                         </div>
 
-                        <p class="pornn_text1">온라인과 오프라인 모두<br>
+                        <p class="pornn_text1 fade-in2">온라인과 오프라인 모두<br>
                             국내는 물론, 해외에서도<br>
                             토스로 간편하게 결제해요.</p>
 
-                        <p class="pornn_text2">결제할 땐, 혜택이 빠질 수 없죠.<br>
+                        <p class="pornn_text2 fade-in">결제할 땐, 혜택이 빠질 수 없죠.<br>
                             쿠폰과 포인트 써서 할인 받고<br>
                             토스프라임 적립까지 또 받아요.</p>
                     </div>
@@ -578,6 +578,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const main5Target = document.querySelector("#main_5 .Loans_star");
   const main6Target = document.querySelector("#main_6 .cred");
   const main7Target = document.querySelector("#main_7 .inves_star");
+  const main9Target = document.querySelector("#main_9 .payment_text");
+  const main10Target = document.querySelector("#main_10 .business_top");
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -610,6 +612,16 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector("#main_7 .inves_star").classList.add("show");
           document.querySelector("#main_7 .inv_text").classList.add("show");
           document.querySelector("#main_7 .inv_text1").classList.add("show");
+        },
+        "payment_text": () => {
+            document.querySelector("#main_9 .payment_text").classList.add("show");
+            document.querySelectorAll(".pornn2.fade-in, .pornn_text2.fade-in").forEach(el => el.classList.add("show"));
+            document.querySelectorAll(".pornn1.fade-in2, .pornn_text1.fade-in2").forEach(el => el.classList.add("show"));
+        },
+        "business_top": () => {
+             document.querySelector("#main_10 .business_top").classList.add("show");
+             document.querySelector("#main_10 .business_bottom").classList.add("show");
+             document.querySelector("#main_10 .business_menus").classList.add("show");
         }
       };
 
@@ -620,9 +632,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, { threshold: 0.6 });
 
-  [main3Target, main4Target, main5Target, main6Target, main7Target].forEach(el => observer.observe(el));
+  [main3Target, main4Target, main5Target, main6Target, main7Target, main9Target, main10Target].forEach(el => observer.observe(el));
 
-  // --- woman 영역 스크롤 마스크 효과 ---
+
   const woman = document.getElementById("woman");
   const leftCover = woman.querySelector(".wtransform");
   const rightCover = woman.querySelector(".wtransform2");
@@ -646,7 +658,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateWomanTransform();
 
 
-  // --- 추가: fade-in-up 양방향 애니메이션 ---
+  
  const fadeElements = document.querySelectorAll(".fade-in-up");
 
   const fadeObserver = new IntersectionObserver((entries) => {

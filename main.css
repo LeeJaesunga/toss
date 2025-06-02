@@ -1421,6 +1421,44 @@ ul,li,a {
     margin-bottom: 100px;
 }
 
+/* 애니메이션 */
+
+.payment_text {
+    opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.payment_text.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+   transition-delay: 2s;
+}
+
+.fade-in2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.fade-in2.show {
+  opacity: 1;
+  transform: translateY(0);
+   transition-delay: 3s;
+}
+
 #main_9 .pornn1 {
     width: 600px;
     height: 936px;
@@ -1546,6 +1584,44 @@ ul,li,a {
     overflow: hidden;
     padding: 100px 0 250px 0;
     background-color: #000000;
+}
+
+/* 애니메이션 */
+
+.business_top {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.business_top.show {
+  opacity: 1;
+  transform: translateY(0);
+   transition-delay: 0.8s;
+}
+
+.business_bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.business_bottom.show {
+  opacity: 1;
+  transform: translateY(0);
+   transition-delay: 1.3s;
+}
+
+.business_menus {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+
+.business_menus.show {
+  opacity: 1;
+  transform: translateY(0);
+   transition-delay: 2.0s;
 }
 
 #main_10 .business_top {
