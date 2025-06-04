@@ -653,7 +653,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const windowHeight = window.innerHeight;
 
       const centerOffset = Math.abs((rect.top + rect.height / 2) - windowHeight / 2);
-      let progress = 1 - centerOffset / (windowHeight / 2);
+      let progress = 1 - centerOffset / (windowHeight );
       progress = Math.max(0, Math.min(1, progress));
 
       const coverPercent = progress * 100;
