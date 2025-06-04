@@ -2238,11 +2238,11 @@ display: block;
         margin-left: -100px;
     }
 
-    div #main_3 .dadami2_text{
-        position: static;
-        width: 100%;
-        font-size: 17px;
-    }
+    #main_3 .dadami2_text {
+        position: static !important;
+        font-size: 17px !important;
+       font-weight: 500 !important;
+}
     
     /* main_4 */
 
