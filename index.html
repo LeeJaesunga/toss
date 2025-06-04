@@ -572,7 +572,6 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // --- 기존 IntersectionObserver 애니메이션 영역 ---
   const main3Target = document.querySelector("#main_3 .cons_stat");
   const main4Target = document.querySelector("#main_4 .kimtos");
   const main5Target = document.querySelector("#main_5 .Loans_star");
@@ -614,18 +613,16 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector("#main_7 .inv_text1")?.classList.add("show");
         },
         "payment_text": () => {
-      document.querySelector("#main_9 .payment_text")?.classList.add("show");
+          document.querySelector("#main_9 .payment_text")?.classList.add("show");
 
-      // 기존 fade-in 관련 요소들
-      document.querySelectorAll(".pornn2.fade-in, .pornn_text2.fade-in").forEach(el => el.classList.add("show"));
-      document.querySelectorAll(".pornn1.fade-in2, .pornn_text1.fade-in2").forEach(el => el.classList.add("show"));
+          document.querySelectorAll(".pornn2.fade-in, .pornn_text2.fade-in").forEach(el => el.classList.add("show"));
+          document.querySelectorAll(".pornn1.fade-in2, .pornn_text1.fade-in2").forEach(el => el.classList.add("show"));
 
-      // ✅ 모바일 섹션 .pornn_inner 안의 이미지 -> 텍스트 순 애니메이션
-      document.querySelectorAll("#main_9 .pornn_inner").forEach(inner => {
-        inner.querySelector(".pornn_inner2")?.classList.add("show");
-        inner.querySelector("span")?.classList.add("show");
-      });
-    },
+          document.querySelectorAll("#main_9 .pornn_inner").forEach(inner => {
+            inner.querySelector(".pornn_inner2")?.classList.add("show");
+            inner.querySelector("span")?.classList.add("show");
+          });
+        },
         "business_top": () => {
           document.querySelector("#main_10 .business_top")?.classList.add("show");
           document.querySelector("#main_10 .business_bottom")?.classList.add("show");
@@ -642,9 +639,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   [main3Target, main4Target, main5Target, main6Target, main7Target, main9Target, main10Target].forEach(el => observer.observe(el));
 
-  // woman 커버 애니메이션 - 반응형 조건 추가
+  // ✅ woman
   const woman = document.getElementById("woman");
-  if (window.innerWidth > 640 && woman) {
+  if (woman && window.innerWidth > 640) {
     const leftCover = woman.querySelector(".wtransform");
     const rightCover = woman.querySelector(".wtransform2");
 
@@ -653,7 +650,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const windowHeight = window.innerHeight;
 
       const centerOffset = Math.abs((rect.top + rect.height / 2) - windowHeight / 2);
-      let progress = 1 - centerOffset / (windowHeight );
+      let progress = 1 - centerOffset / windowHeight;
       progress = Math.max(0, Math.min(1, progress));
 
       const coverPercent = progress * 100;
@@ -682,6 +679,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fadeElements.forEach(el => fadeObserver.observe(el));
 });
 </script>
+
 
 
 
