@@ -2382,6 +2382,21 @@ display: block;
         margin: auto;
     }
 
+    #main_5 .pons .css_porn {
+        width: 100%;
+         height: auto;
+    }
+
+     #main_5 .css_porn2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+     }
+
+     #main_5 .css_porn2 img {
+        
+     }
+
     #main_5 .low_less {
         word-break: keep-all;
         white-space: pre-wrap;
