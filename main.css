@@ -754,6 +754,60 @@ ul,li,a {
     height: 100%;
 }
 
+#main_5 .css_pornss {
+    position: absolute;
+    top: 104px;
+    /* right: -92px; */
+    left: 53px;
+    height: auto;
+    width: 85%;
+}
+
+.css_pornss2 {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  height: auto;
+  z-index: 2;
+}
+
+.css_pornss2 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 34px;
+  opacity: 0;
+  animation: fadeSequence 8s infinite;
+}
+
+/* 이미지 순서에 따라 딜레이 조절 */
+.css_pornss2 img:nth-child(1) {
+  animation-delay: 0s;
+}
+.css_pornss2 img:nth-child(2) {
+  animation-delay: 2s;
+}
+.css_pornss2 img:nth-child(3) {
+  animation-delay: 4s;
+}
+.css_pornss2 img:nth-child(4) {
+  animation-delay: 6s;
+}
+
+/* 하나씩 2초만 보이게, 이후 사라짐 */
+@keyframes fadeSequence {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  25%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
 #main_5 .Loans_star {
     margin-bottom: 165px;
 }
@@ -2382,20 +2436,49 @@ display: block;
         margin: auto;
     }
 
-    #main_5 .pons .css_porn {
+    #main_5 .pons .css_pornss {
         width: 100%;
          height: auto;
+         position: absolute;
+            top: 104px;
+            right: 37px;
     }
 
-     #main_5 .css_porn2 {
+     #main_5 .css_pornss2 {
         position: absolute;
-        top: 50%;
-        left: 50%;
-     }
+        top: 316px;
+        left: 41%;
+        transform: translateX(-50%);
+        width: 204px;
+        height: auto;
+        z-index: 2;
+}
 
-     #main_5 .css_porn2 img {
-        
-     }
+.css_pornss2 img {
+  position: absolute;
+  width: 220px;       
+  left: 0;
+}
+
+.css_pornss2 img.bun-top {
+  top: 0px;
+  z-index: 4;
+}
+
+.css_pornss2 img.lettuce-layer {
+  top: 0px;
+  z-index: 3;
+}
+
+.css_pornss2 img.patty-layer {
+  top: 0px;
+  z-index: 2;
+}
+
+.css_pornss2 img.bun-bottom {
+  top: 0px;
+  z-index: 1;
+}
 
     #main_5 .low_less {
         word-break: keep-all;
