@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       leftCover.style.transform = `translateX(-${coverPercent}%)`;
       rightCover.style.transform = `translateX(${coverPercent}%)`;
+
     }
 
     window.addEventListener("scroll", updateWomanTransform);
